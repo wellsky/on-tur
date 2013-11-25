@@ -1,0 +1,14 @@
+AddDefaultCharset UTF-8
+RewriteEngine On
+RewriteRule ^news$ news.php?url=news [NC,L]
+RewriteRule ^constructor$ constructor.php?url=news [NC,L]
+RewriteRule ^tours$ tours.php?url=tours [NC,L]
+RewriteRule ^tours/([^/]*)$ tours.php?category=$1 [NC,L]
+RewriteRule ^tours/view/([^/]*)$ tour.php?url=$1 [NC,L]
+RewriteRule ^admin$ well_login.php [NC,L]
+RewriteRule ^/$ index.php [NC,L]
+RewriteRule ^$ index.php [NC,L]
+RewriteRule ^([^/.]*)$ content.php?url=$1 [NC]
+
+
+
